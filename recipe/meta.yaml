@@ -1,4 +1,4 @@
-{% set version = '0.7.0' %}
+{% set version = "0.7.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robustHD_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robustHD/robustHD_{{ version }}.tar.gz
-  sha256: d202039bc486189ced3540d1a8dce7c0dc3007bb63ba514de89ecb8fa96812fd
+  sha256: 7d5072376fd7d6ea3ad926c212bb3dca626b690acd6a3e8a891aa41171eb1368
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -61,8 +61,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=robustHD
   license: GPL-2.0-or-later
-  summary: Robust methods for high-dimensional data, in particular linear model selection techniques
-    based on least angle regression and sparse regression.
+  summary: Robust methods for high-dimensional data, in particular linear model selection techniques based on least angle regression and sparse regression.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
