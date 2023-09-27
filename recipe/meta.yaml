@@ -1,4 +1,4 @@
-{% set version = "0.7.4" %}
+{% set version = "0.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robustHD_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robustHD/robustHD_{{ version }}.tar.gz
-  sha256: b18afe9e5bc3a7e2fdf8f8faa166b1ab99725b30db897d1d027365f4aa6ae38d
+  sha256: 439be95602f776af988cb78cf8d1b5f000ed08c3536ed2e1687444b2c5da309a
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
