@@ -1,6 +1,5 @@
 {% set version = "0.8.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-robusthd
@@ -13,8 +12,7 @@ source:
   sha256: 9b712d951b53795627e5ad9e1730da9a48c60286d8edd49abbd7a687f2e88238
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -47,7 +45,6 @@ requirements:
     - r-robustbase >=0.9_5
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mass
     - r-rcpp >=0.9.10
     - r-rcpparmadillo >=0.3.0
