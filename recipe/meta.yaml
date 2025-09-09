@@ -12,10 +12,14 @@ source:
   sha256: 9b712d951b53795627e5ad9e1730da9a48c60286d8edd49abbd7a687f2e88238
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
