@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robustHD_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robustHD/robustHD_{{ version }}.tar.gz
-  sha256: 97fbe3f3be64152ac2ad42bda24c50d12f69aa88cd7f0ebda4ae7febb09173ac
+  sha256: e0f20c12bcbe0e4861d595240be2d7d920b1906cb36812f3e04d4a1aa64f5f99
 
 build:
   number: 0
